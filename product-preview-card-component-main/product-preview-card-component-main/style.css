@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+body {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size: 14px;
+    font-family: 'Montserrat','Fraunces', sans-serif;
+    background-color: var(--Cream);
+}
+
+#card {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    margin: 1em auto;
+}
+
+.product {
+    width: 350px;
+}
+
+p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: var(--Dark-grayish-blue);
+}
+
+.content h1 {
+    font-family: 'Fraunces', serif;
+    padding: 0 3em 0 0;
+}
+
+.content p {
+    color: var(--Dark-grayish-blue);
+    font-size: var(--Font-size);
+    line-height: 1.5em;
+    padding: 0 4em 0 0;
+}
+
+.content {
+    background-color: #ffff;
+    padding: 2em;
+    width: 350px;
+    height: 500px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price h1 {
+    color: var(--Dark-cyan);
+}
+
+.price p {
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+.button {
+    padding: 1em;
+    background-color: var(--Dark-cyan);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 75%;
+    margin-top: 2em;
+}
+
+.button:active,
+.button:hover {
+    background-color: hsl(156.32deg 42.22% 17.65%);
+    transition: 0.3s ease-in;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 2% 0 0 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+    #card {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .product {
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .content {
+        width: 290px;
+        height: 370px;
+    }
+
+    .content h1,
+    .content p {
+        padding: 0;
+    }
+
+    .price {
+        gap: 2em;
+    }
+
+    .button {
+        width: 90%;
+        margin-top: 0;
+    }
+
+}
